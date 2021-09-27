@@ -1,2 +1,3 @@
 # Agregando Equipo
-* Hector
+* Hector Gerardo Zapata
+* Manuel Valenzuela Vazquez
