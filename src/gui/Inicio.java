@@ -18,10 +18,10 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
-//        this.getRootPane().setOpaque(false);
-//        this.getContentPane().setBackground(new Color(0, 0, 0, 0));
-//        this.setBackground(new Color(0, 0, 0, 0));
-//        
+        this.getRootPane().setOpaque(false);
+        this.getContentPane().setBackground(new Color(0, 0, 0, 0));
+        this.setBackground(new Color(0, 0, 0, 0));
+        
         this.jPanel1.getRootPane().setOpaque(false);
         this.jPanel1.setBackground(new Color(0, 0, 0, 0));
         this.setVisible(true);
@@ -66,7 +66,7 @@ public class Inicio extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 560, 180, 60));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 440, 180, 60));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnCerrar.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -81,8 +81,8 @@ public class Inicio extends javax.swing.JFrame {
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 30, 30));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 80)); // NOI18N
-        jLabel1.setText("TIMBIRICHE");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 440, 260));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/TimbirichePrincipal.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 290, 110));
 
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg.png"))); // NOI18N
         jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, 690));
@@ -94,13 +94,12 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        dispose();
+     System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         DLGRegistro dlgRegistro = new DLGRegistro(this, true);
-        this.setVisible(false);
-        dlgRegistro.setVisible(true);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

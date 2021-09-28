@@ -11,12 +11,13 @@ public class DLGRegistro extends javax.swing.JDialog {
     public DLGRegistro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
         this.getRootPane().setOpaque(false);
         this.getContentPane().setBackground(new Color(0, 0, 0, 0));
         this.setBackground(new Color(0, 0, 0, 0));
         
-        this.jPanel1.getRootPane().setOpaque(false);
-        this.jPanel1.setBackground(new Color(0, 0, 0, 0));
+        this.panel.getRootPane().setOpaque(false);
+        this.panel.setBackground(new Color(0, 0, 0, 0));
         
         this.setVisible(true);
     }
@@ -26,7 +27,7 @@ public class DLGRegistro extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        panel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -42,34 +43,34 @@ public class DLGRegistro extends javax.swing.JDialog {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador1.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 190, 320));
+        panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 190, 320));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador3.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 190, 320));
+        panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 190, 320));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador4.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 190, 190, 320));
+        panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 190, 190, 320));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador2.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 190, 320));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 60, 30));
+        panel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 190, 320));
+        panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 60, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnMinimizar.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 30));
+        panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 30));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnIniciar.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 180, 60));
+        panel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 180, 60));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnCerrar.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -81,15 +82,15 @@ public class DLGRegistro extends javax.swing.JDialog {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 30, 30));
+        panel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 30, 30));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Titulo.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 240, 70));
+        panel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 240, 70));
 
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FondoDLG.png"))); // NOI18N
-        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, 690));
+        panel.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, 690));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, -1));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -111,6 +112,6 @@ public class DLGRegistro extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }
