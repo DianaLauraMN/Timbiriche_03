@@ -53,21 +53,26 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
         btnMinimizar.setBorder(null);
         btnMinimizar.setBorderPainted(false);
         btnMinimizar.setContentAreaFilled(false);
-        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         panel.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 30));
 
         imgBtnUnirse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btbUnirse.png"))); // NOI18N
         imgBtnUnirse.setBorder(null);
         imgBtnUnirse.setBorderPainted(false);
         imgBtnUnirse.setContentAreaFilled(false);
-        imgBtnUnirse.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        imgBtnUnirse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgBtnUnirse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imgBtnUnirseActionPerformed(evt);
+            }
+        });
         panel.add(imgBtnUnirse, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 180, 60));
 
         btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnCerrar.png"))); // NOI18N
         btnCerrar.setBorder(null);
         btnCerrar.setBorderPainted(false);
         btnCerrar.setContentAreaFilled(false);
-        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCerrarActionPerformed(evt);
@@ -105,6 +110,10 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
       dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
+
+    private void imgBtnUnirseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imgBtnUnirseActionPerformed
+        DLGRegistro dlgRegistro = new DLGRegistro(null, true);
+    }//GEN-LAST:event_imgBtnUnirseActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
