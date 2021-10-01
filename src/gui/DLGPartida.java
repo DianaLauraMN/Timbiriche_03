@@ -6,6 +6,7 @@
 package gui;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
 
 /**
  *
@@ -30,6 +31,12 @@ public class DLGPartida extends javax.swing.JDialog {
         this.panel.getRootPane().setOpaque(false);
         this.panel.setBackground(new Color(0, 0, 0, 0));
 
+        Color c = new Color(0, 0, 0, 0);
+        this.panelJugador1.setBackground(c);
+        this.panelJugador2.setBackground(c);
+        this.panelJugador3.setBackground(c);
+        this.panelJugador4.setBackground(c);
+       
         this.setVisible(true);
     }
 
@@ -43,6 +50,15 @@ public class DLGPartida extends javax.swing.JDialog {
     private void initComponents() {
 
         panel = new javax.swing.JPanel();
+        colorJugador1 = new javax.swing.JButton();
+        colorJugador2 = new javax.swing.JButton();
+        colorJugador3 = new javax.swing.JButton();
+        colorJugador4 = new javax.swing.JButton();
+        panelJugador4 = new javax.swing.JPanel();
+        panelJugador2 = new javax.swing.JPanel();
+        panelJugador3 = new javax.swing.JPanel();
+        panelJugador1 = new javax.swing.JPanel();
+        inicia = new javax.swing.JButton();
         lblTitulo = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
         btnMinimizar = new javax.swing.JButton();
@@ -59,7 +75,7 @@ public class DLGPartida extends javax.swing.JDialog {
         lblJ4Nombre = new javax.swing.JLabel();
         lblJugador4Puntaje = new javax.swing.JLabel();
         btnAbandonar = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        tablero = new javax.swing.JPanel();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -70,8 +86,68 @@ public class DLGPartida extends javax.swing.JDialog {
 
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        colorJugador1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnColor Blue.png"))); // NOI18N
+        colorJugador1.setBorder(null);
+        colorJugador1.setBorderPainted(false);
+        colorJugador1.setContentAreaFilled(false);
+        colorJugador1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colorJugador1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorJugador1ActionPerformed(evt);
+            }
+        });
+        panel.add(colorJugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 180, 50, 40));
+
+        colorJugador2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnColor Blue.png"))); // NOI18N
+        colorJugador2.setBorder(null);
+        colorJugador2.setBorderPainted(false);
+        colorJugador2.setContentAreaFilled(false);
+        colorJugador2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colorJugador2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorJugador2ActionPerformed(evt);
+            }
+        });
+        panel.add(colorJugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 250, 50, 40));
+
+        colorJugador3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnColor Blue.png"))); // NOI18N
+        colorJugador3.setBorder(null);
+        colorJugador3.setBorderPainted(false);
+        colorJugador3.setContentAreaFilled(false);
+        colorJugador3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colorJugador3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorJugador3ActionPerformed(evt);
+            }
+        });
+        panel.add(colorJugador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 320, 50, 40));
+
+        colorJugador4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnColor Blue.png"))); // NOI18N
+        colorJugador4.setBorder(null);
+        colorJugador4.setBorderPainted(false);
+        colorJugador4.setContentAreaFilled(false);
+        colorJugador4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colorJugador4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorJugador4ActionPerformed(evt);
+            }
+        });
+        panel.add(colorJugador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 390, 50, 40));
+        panel.add(panelJugador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(839, 384, 50, 50));
+        panel.add(panelJugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(839, 244, 50, 50));
+        panel.add(panelJugador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(839, 314, 50, 50));
+        panel.add(panelJugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(839, 174, 50, 50));
+
+        inicia.setText("Inicia");
+        inicia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciaActionPerformed(evt);
+            }
+        });
+        panel.add(inicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 80, 110, 50));
+
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Titulo.png"))); // NOI18N
-        panel.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 240, 70));
+        panel.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 240, 70));
 
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnCerrar.png"))); // NOI18N
         btnSalir.setBorder(null);
@@ -154,21 +230,16 @@ public class DLGPartida extends javax.swing.JDialog {
         btnAbandonar.setBorderPainted(false);
         btnAbandonar.setContentAreaFilled(false);
         btnAbandonar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAbandonar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAbandonarActionPerformed(evt);
-            }
-        });
-        panel.add(btnAbandonar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 560, 170, 50));
+        panel.add(btnAbandonar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 600, 170, 50));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 720, 450));
+        tablero.setBackground(new java.awt.Color(255, 255, 255));
+        tablero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel.add(tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 700, 530));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BGNormal.png"))); // NOI18N
         panel.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
 
-        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 700));
 
         pack();
         setLocationRelativeTo(null);
@@ -182,15 +253,118 @@ public class DLGPartida extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMinimizarActionPerformed
 
-    private void btnAbandonarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbandonarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAbandonarActionPerformed
+    private void colorJugador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorJugador1ActionPerformed
+        StringBuffer colores = new StringBuffer();
+        DLGColor dlg = new DLGColor(null, true, colores);
+
+        String coloresPos[] = colores.toString().split(",");
+        int coloresInt[] = {
+            Integer.parseInt(coloresPos[0]),
+            Integer.parseInt(coloresPos[1]),
+            Integer.parseInt(coloresPos[2])
+        };
+
+        Graphics2D g = (Graphics2D) this.panelJugador1.getGraphics();
+        Color colorJugador = new Color(coloresInt[0], coloresInt[1], coloresInt[2]);
+        g.setColor(colorJugador);
+
+        g.fillOval(0, 0, 47, 47);
+        this.panelJugador1.paintComponents(g);
+    }//GEN-LAST:event_colorJugador1ActionPerformed
+
+    private void colorJugador2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorJugador2ActionPerformed
+        StringBuffer colores = new StringBuffer();
+        DLGColor dlg = new DLGColor(null, true, colores);
+
+        String coloresPos[] = colores.toString().split(",");
+        int coloresInt[] = {
+            Integer.parseInt(coloresPos[0]),
+            Integer.parseInt(coloresPos[1]),
+            Integer.parseInt(coloresPos[2])
+        };
+
+        Graphics2D g = (Graphics2D) this.panelJugador2.getGraphics();
+        Color colorJugador = new Color(coloresInt[0], coloresInt[1], coloresInt[2]);
+        g.setColor(colorJugador);
+
+        g.fillOval(0, 0, 47, 47);
+        this.panelJugador2.paintComponents(g);
+    }//GEN-LAST:event_colorJugador2ActionPerformed
+
+    private void colorJugador3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorJugador3ActionPerformed
+        StringBuffer colores = new StringBuffer();
+        DLGColor dlg = new DLGColor(null, true, colores);
+
+        String coloresPos[] = colores.toString().split(",");
+        int coloresInt[] = {
+            Integer.parseInt(coloresPos[0]),
+            Integer.parseInt(coloresPos[1]),
+            Integer.parseInt(coloresPos[2])
+        };
+
+        Graphics2D g = (Graphics2D) this.panelJugador3.getGraphics();
+        Color colorJugador = new Color(coloresInt[0], coloresInt[1], coloresInt[2]);
+        g.setColor(colorJugador);
+
+        g.fillOval(0, 0, 47, 47);
+        this.panelJugador3.paintComponents(g);
+    }//GEN-LAST:event_colorJugador3ActionPerformed
+
+    private void colorJugador4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorJugador4ActionPerformed
+        StringBuffer colores = new StringBuffer();
+        DLGColor dlg = new DLGColor(null, true, colores);
+
+        String coloresPos[] = colores.toString().split(",");
+        int coloresInt[] = {
+            Integer.parseInt(coloresPos[0]),
+            Integer.parseInt(coloresPos[1]),
+            Integer.parseInt(coloresPos[2])
+        };
+
+        Graphics2D g = (Graphics2D) this.panelJugador4.getGraphics();
+        Color colorJugador = new Color(coloresInt[0], coloresInt[1], coloresInt[2]);
+        g.setColor(colorJugador);
+
+        g.fillOval(0, 0, 47, 47);
+        this.panelJugador4.paintComponents(g);
+    }//GEN-LAST:event_colorJugador4ActionPerformed
+
+    private void iniciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciaActionPerformed
+        pintaTablero(20);
+    }//GEN-LAST:event_iniciaActionPerformed
+
+    public void pintaTablero(int tam){
+         //---------------------------------------------------
+
+        Graphics2D g = (Graphics2D) tablero.getGraphics();
+        int xL = 10;
+        int xR = this.tablero.getWidth() - 20;
+        int yT = 10;
+
+        double distancia = Math.sqrt(Math.pow((xL - xR), 2) + Math.pow((yT - yT), 2));
+        double dist = distancia / tam;
+
+        for (int i = 0; i <= tam; i++) {
+            for (int j = 0; j <= tam; j++) {
+                g.fillOval((int) (xL + dist * j), (int) (yT + dist * i), 5, 5);
+            }
+        }
+
+        this.tablero.paintComponents(g);
+
+        //---------------------------------------------------
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbandonar;
     private javax.swing.JButton btnMinimizar;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton colorJugador1;
+    private javax.swing.JButton colorJugador2;
+    private javax.swing.JButton colorJugador3;
+    private javax.swing.JButton colorJugador4;
+    private javax.swing.JButton inicia;
     private javax.swing.JLabel lblFondo;
     private javax.swing.JLabel lblJ1Nombre;
     private javax.swing.JLabel lblJ1Puntaje;
@@ -206,5 +380,10 @@ public class DLGPartida extends javax.swing.JDialog {
     private javax.swing.JLabel lblJugador4Puntaje;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel panel;
+    private javax.swing.JPanel panelJugador1;
+    private javax.swing.JPanel panelJugador2;
+    private javax.swing.JPanel panelJugador3;
+    private javax.swing.JPanel panelJugador4;
+    private javax.swing.JPanel tablero;
     // End of variables declaration//GEN-END:variables
 }
