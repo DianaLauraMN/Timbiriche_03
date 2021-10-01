@@ -46,14 +46,14 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
 
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        imgUnirsePartidaCartaJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CartaJugador-aceptoBlanco.png"))); // NOI18N
+        imgUnirsePartidaCartaJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CartaJugador.png"))); // NOI18N
         panel.add(imgUnirsePartidaCartaJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 190, 320));
 
         btnMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnMinimizar.png"))); // NOI18N
         btnMinimizar.setBorder(null);
         btnMinimizar.setBorderPainted(false);
         btnMinimizar.setContentAreaFilled(false);
-        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panel.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 30));
 
         imgBtnUnirse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btbUnirse.png"))); // NOI18N
@@ -72,7 +72,7 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
         btnCerrar.setBorder(null);
         btnCerrar.setBorderPainted(false);
         btnCerrar.setContentAreaFilled(false);
-        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCerrarActionPerformed(evt);

@@ -45,16 +45,16 @@ public class DLGRegistro extends javax.swing.JDialog {
 
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador1.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CartaJugador.png"))); // NOI18N
         panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 190, 320));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador3.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CartaJugador.png"))); // NOI18N
         panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 190, 320));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador4.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CJugadorDesactivado.png"))); // NOI18N
         panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 190, 190, 320));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CFJugador2.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CartaJugador.png"))); // NOI18N
         panel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 190, 320));
         panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 60, 30));
 
@@ -62,7 +62,7 @@ public class DLGRegistro extends javax.swing.JDialog {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -86,7 +86,7 @@ public class DLGRegistro extends javax.swing.JDialog {
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
