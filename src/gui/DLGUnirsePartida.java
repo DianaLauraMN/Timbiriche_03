@@ -102,10 +102,11 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
         panel.add(btnColorea, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 60, 50));
 
         txtNombreJugador.setBackground(new java.awt.Color(255, 255, 255));
-        txtNombreJugador.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        txtNombreJugador.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         txtNombreJugador.setForeground(new java.awt.Color(53, 63, 75));
+        txtNombreJugador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtNombreJugador.setBorder(null);
-        panel.add(txtNombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 140, 30));
+        panel.add(txtNombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 387, 140, 30));
 
         FONDO.setForeground(new java.awt.Color(53, 63, 75));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Unirse.png"))); // NOI18N
@@ -127,12 +128,6 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
 
     private void btnColoreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColoreaActionPerformed
 
-//        if (this.color.isVisible()) {
-//             this.color.setVisible(false);
-//        } else {
-//            this.color.setVisible(true);
-//
-//        }
         StringBuffer colores = new StringBuffer();
         DLGColor dlg = new DLGColor(null, true, colores);
 
