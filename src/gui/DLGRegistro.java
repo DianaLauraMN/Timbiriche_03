@@ -68,7 +68,7 @@ public class DLGRegistro extends javax.swing.JDialog {
                 jButton1ActionPerformed(evt);
             }
         });
-        panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 30));
+        panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 30, 30));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnIniciar.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -92,15 +92,15 @@ public class DLGRegistro extends javax.swing.JDialog {
                 jButton3ActionPerformed(evt);
             }
         });
-        panel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 30, 30));
+        panel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 10, 30, 30));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Titulo.png"))); // NOI18N
         panel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 240, 70));
 
-        FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FondoDLG.png"))); // NOI18N
-        panel.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, 690));
+        FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BGNormal.png"))); // NOI18N
+        panel.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
 
-        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, -1));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, -1));
 
         pack();
         setLocationRelativeTo(null);

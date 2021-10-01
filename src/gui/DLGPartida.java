@@ -77,25 +77,25 @@ public class DLGPartida extends javax.swing.JDialog {
         btnSalir.setBorder(null);
         btnSalir.setBorderPainted(false);
         btnSalir.setContentAreaFilled(false);
-        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
             }
         });
-        panel.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 30, 30));
+        panel.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 10, 30, 30));
 
         btnMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnMinimizar.png"))); // NOI18N
         btnMinimizar.setBorder(null);
         btnMinimizar.setBorderPainted(false);
         btnMinimizar.setContentAreaFilled(false);
-        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnMinimizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMinimizarActionPerformed(evt);
             }
         });
-        panel.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 30));
+        panel.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 30, 30));
 
         lblJ1Puntaje.setForeground(new java.awt.Color(204, 204, 204));
         lblJ1Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -153,7 +153,7 @@ public class DLGPartida extends javax.swing.JDialog {
         btnAbandonar.setBorder(null);
         btnAbandonar.setBorderPainted(false);
         btnAbandonar.setContentAreaFilled(false);
-        btnAbandonar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAbandonar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnAbandonar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbandonarActionPerformed(evt);
@@ -165,10 +165,10 @@ public class DLGPartida extends javax.swing.JDialog {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 720, 450));
 
-        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FondoDLG.png"))); // NOI18N
-        panel.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, 690));
+        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BGNormal.png"))); // NOI18N
+        panel.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
 
-        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 710));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
 
         pack();
         setLocationRelativeTo(null);

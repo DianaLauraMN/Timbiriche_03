@@ -1,7 +1,9 @@
-
 package gui;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
+import javax.swing.JColorChooser;
+import javax.swing.colorchooser.ColorSelectionModel;
 
 public class DLGUnirsePartida extends javax.swing.JDialog {
 
@@ -11,33 +13,28 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
     public DLGUnirsePartida(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
-        this.getRootPane().setOpaque(false);
-        this.getContentPane().setBackground(new Color(0, 0, 0, 0));
-        this.setBackground(new Color(0, 0, 0, 0));
-        
+
         this.panel.getRootPane().setOpaque(false);
         this.panel.setBackground(new Color(0, 0, 0, 0));
-        
+
+        Color c = new Color(0, 0, 0, 0);
+        this.pnl.setBackground(c);
+        this.color.setVisible(false);
         this.setVisible(true);
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         panel = new javax.swing.JPanel();
-        imgUnirsePartidaCartaJugador = new javax.swing.JLabel();
+        pnl = new javax.swing.JPanel();
         btnMinimizar = new javax.swing.JButton();
         imgBtnUnirse = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
-        titulo = new javax.swing.JLabel();
-        imgIconoPartida = new javax.swing.JLabel();
-        imgFlecha1 = new javax.swing.JLabel();
-        imgFlecha2 = new javax.swing.JLabel();
-        imgFlecha3 = new javax.swing.JLabel();
-        imgFlecha4 = new javax.swing.JLabel();
+        btnColorea = new javax.swing.JButton();
+        txtNombreJugador = new javax.swing.JTextField();
+        color = new javax.swing.JColorChooser();
         FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -46,15 +43,29 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
 
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        imgUnirsePartidaCartaJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CartaJugador.png"))); // NOI18N
-        panel.add(imgUnirsePartidaCartaJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 190, 320));
+        pnl.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        pnl.setPreferredSize(new java.awt.Dimension(100, 100));
+
+        javax.swing.GroupLayout pnlLayout = new javax.swing.GroupLayout(pnl);
+        pnl.setLayout(pnlLayout);
+        pnlLayout.setHorizontalGroup(
+            pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 101, Short.MAX_VALUE)
+        );
+        pnlLayout.setVerticalGroup(
+            pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 101, Short.MAX_VALUE)
+        );
+
+        panel.add(pnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 219, 101, 101));
+        pnl.getAccessibleContext().setAccessibleName("");
 
         btnMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnMinimizar.png"))); // NOI18N
         btnMinimizar.setBorder(null);
         btnMinimizar.setBorderPainted(false);
         btnMinimizar.setContentAreaFilled(false);
         btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        panel.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 30));
+        panel.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 30, 30));
 
         imgBtnUnirse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btbUnirse.png"))); // NOI18N
         imgBtnUnirse.setBorder(null);
@@ -66,7 +77,7 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
                 imgBtnUnirseActionPerformed(evt);
             }
         });
-        panel.add(imgBtnUnirse, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 180, 60));
+        panel.add(imgBtnUnirse, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 180, 60));
 
         btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnCerrar.png"))); // NOI18N
         btnCerrar.setBorder(null);
@@ -78,56 +89,75 @@ public class DLGUnirsePartida extends javax.swing.JDialog {
                 btnCerrarActionPerformed(evt);
             }
         });
-        panel.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 30, 30));
+        panel.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 10, 30, 30));
 
-        titulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Titulo.png"))); // NOI18N
-        panel.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 240, 70));
+        btnColorea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnColor_1.png"))); // NOI18N
+        btnColorea.setBorder(null);
+        btnColorea.setBorderPainted(false);
+        btnColorea.setContentAreaFilled(false);
+        btnColorea.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnColorea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColoreaActionPerformed(evt);
+            }
+        });
+        panel.add(btnColorea, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 60, 50));
 
-        imgIconoPartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IconoPartida.png"))); // NOI18N
-        panel.add(imgIconoPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, -1, -1));
+        txtNombreJugador.setBackground(new java.awt.Color(255, 255, 255));
+        txtNombreJugador.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        txtNombreJugador.setForeground(new java.awt.Color(53, 63, 75));
+        txtNombreJugador.setBorder(null);
+        panel.add(txtNombreJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 140, 30));
+        panel.add(color, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, 430, 220));
 
-        imgFlecha1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/flecha.png"))); // NOI18N
-        panel.add(imgFlecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
+        FONDO.setForeground(new java.awt.Color(53, 63, 75));
+        FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Unirse.png"))); // NOI18N
+        panel.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
 
-        imgFlecha2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/flecha.png"))); // NOI18N
-        panel.add(imgFlecha2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, -1, -1));
-
-        imgFlecha3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/flecha.png"))); // NOI18N
-        panel.add(imgFlecha3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, -1, -1));
-
-        imgFlecha4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/flecha.png"))); // NOI18N
-        panel.add(imgFlecha4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, -1, -1));
-
-        FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FondoDLG.png"))); // NOI18N
-        panel.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, 690));
-
-        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, -1));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-      dispose();
+        dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void imgBtnUnirseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imgBtnUnirseActionPerformed
         DLGRegistro dlgRegistro = new DLGRegistro(null, true);
     }//GEN-LAST:event_imgBtnUnirseActionPerformed
 
+    private void btnColoreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColoreaActionPerformed
+
+        if (this.color.isVisible()) {
+             this.color.setVisible(false);
+        } else {
+            this.color.setVisible(true);
+
+        }
+
+        Color colorJugador = (this.color.getColor());
+        Graphics2D g = (Graphics2D) this.pnl.getGraphics();
+
+        g.setColor(colorJugador);
+
+        g.fillOval(0, 0, 101, 101);
+        this.pnl.paintComponents(g);
+
+
+    }//GEN-LAST:event_btnColoreaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
     private javax.swing.JButton btnCerrar;
+    private javax.swing.JButton btnColorea;
     private javax.swing.JButton btnMinimizar;
+    private javax.swing.JColorChooser color;
     private javax.swing.JButton imgBtnUnirse;
-    private javax.swing.JLabel imgFlecha1;
-    private javax.swing.JLabel imgFlecha2;
-    private javax.swing.JLabel imgFlecha3;
-    private javax.swing.JLabel imgFlecha4;
-    private javax.swing.JLabel imgIconoPartida;
-    private javax.swing.JLabel imgUnirsePartidaCartaJugador;
     private javax.swing.JPanel panel;
-    private javax.swing.JLabel titulo;
+    private javax.swing.JPanel pnl;
+    private javax.swing.JTextField txtNombreJugador;
     // End of variables declaration//GEN-END:variables
 }
