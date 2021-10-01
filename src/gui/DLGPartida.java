@@ -7,6 +7,7 @@ package gui;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Point;
 
 /**
  *
@@ -20,23 +21,21 @@ public class DLGPartida extends javax.swing.JDialog {
      * @param parent
      * @param modal
      */
+    Point start = new Point();
+    Point end = new Point();
+
     public DLGPartida(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 
-        this.getRootPane().setOpaque(false);
-        this.getContentPane().setBackground(new Color(0, 0, 0, 0));
-        this.setBackground(new Color(0, 0, 0, 0));
-
-        this.panel.getRootPane().setOpaque(false);
-        this.panel.setBackground(new Color(0, 0, 0, 0));
+        
 
         Color c = new Color(0, 0, 0, 0);
         this.panelJugador1.setBackground(c);
         this.panelJugador2.setBackground(c);
         this.panelJugador3.setBackground(c);
         this.panelJugador4.setBackground(c);
-       
+
         this.setVisible(true);
     }
 
@@ -81,9 +80,10 @@ public class DLGPartida extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1070, 700));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1070, 700));
+        setPreferredSize(new java.awt.Dimension(1066, 680));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        panel.setPreferredSize(new java.awt.Dimension(1066, 680));
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         colorJugador1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnColor Blue.png"))); // NOI18N
@@ -144,7 +144,7 @@ public class DLGPartida extends javax.swing.JDialog {
                 iniciaActionPerformed(evt);
             }
         });
-        panel.add(inicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 80, 110, 50));
+        panel.add(inicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 470, 110, 50));
 
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Titulo.png"))); // NOI18N
         panel.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 240, 70));
@@ -233,13 +233,21 @@ public class DLGPartida extends javax.swing.JDialog {
         panel.add(btnAbandonar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 600, 170, 50));
 
         tablero.setBackground(new java.awt.Color(255, 255, 255));
+        tablero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                tableroMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                tableroMouseReleased(evt);
+            }
+        });
         tablero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panel.add(tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 700, 530));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BGNormal.png"))); // NOI18N
         panel.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
 
-        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 700));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 680));
 
         pack();
         setLocationRelativeTo(null);
@@ -331,10 +339,28 @@ public class DLGPartida extends javax.swing.JDialog {
 
     private void iniciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciaActionPerformed
         pintaTablero(20);
+        this.inicia.setVisible(false);
     }//GEN-LAST:event_iniciaActionPerformed
 
-    public void pintaTablero(int tam){
-         //---------------------------------------------------
+    private void tableroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableroMousePressed
+        int x1 = evt.getX();
+        int y1 = evt.getY();
+        
+        start.setLocation(x1, y1);
+
+    }//GEN-LAST:event_tableroMousePressed
+
+    private void tableroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableroMouseReleased
+       int x1 = evt.getX();
+        int y1 = evt.getY();
+        
+        end.setLocation(x1, y1);
+        pintaLinea(start, end);
+        
+    }//GEN-LAST:event_tableroMouseReleased
+
+    public void pintaTablero(int tam) {
+        //---------------------------------------------------
 
         Graphics2D g = (Graphics2D) tablero.getGraphics();
         int xL = 10;
@@ -349,12 +375,20 @@ public class DLGPartida extends javax.swing.JDialog {
                 g.fillOval((int) (xL + dist * j), (int) (yT + dist * i), 5, 5);
             }
         }
-
         this.tablero.paintComponents(g);
-
         //---------------------------------------------------
     }
-    
+
+    public void pintaLinea( Point s, Point e) {
+        Graphics2D g = (Graphics2D) tablero.getGraphics();
+        g.drawLine((int) s.getX(), (int) s.getY(), (int) e.getX(), (int) e.getY());
+        this.tablero.paintComponents(g);
+        
+       
+     
+       
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbandonar;
